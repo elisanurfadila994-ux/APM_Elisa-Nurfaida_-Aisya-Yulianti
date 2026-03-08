@@ -1,0 +1,25 @@
+1. Setelah di RUN 5 kali percobaan: 
+2. Hasil :
+    LOAD 1 : 100000
+    LOAD 2 : 100001
+    lOAD 3 : 100001
+    LOAD 4 : 100000
+    LOAD 5 : 100001
+    
+3. Penyebab inkonsistens adalah : adanya interleaving antara thread tanpa adanya mekanisme sinkronisasi.
+4. Gambar Skenario interleaving        : 
+   waktu | Thread 1 | Thread 2 | nilai counter
+     T1  |   read   |  idle    |      0
+            counter 
+     T2  | context  |  read    |      0    
+           switch     counter
+     T3  |  idle    | write    |      1
+                      (0+1)    
+     T5  | write    | idle     |      1
+           (0+1)
+           
+    Keterangan : meskipun ada dua intruksi penambahan yang dieksekusi, memori hanya bertambah +1 karena 
+                 thread 1 dan thread 2 bekerja pada basis nilai yang sama sebelum sinkronisasi terjadi.
+                 
+    
+    # Nama : Elisa Nurfaida | Aisya Yulianti
