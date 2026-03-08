@@ -1,0 +1,8 @@
+# perbaikan deaclock 
+    berhasil karena thread 2 tidak akan bisa mengunci lock2 sebelum ia berhasil mendapatkan lock1. 
+    jika lock1 sedang dipakai thread 1 maka tread 2 akan menunggu tertib sehingga tidak terjadi circular wait.
+# Diskusi Starvation 
+    1. mengapa thread lain sulit berjalan ? 
+    2. hubungkan dengan scheduling policy.
+    karena starvation terjadi jika sebuah thread "mati kelaparan" karena gak pernah kebagian jatah CPU, hal ini terjadi karena kebijakan penjadwalan (scheduling policy)
+    di sistem operasi yang mungkin kurang adil. karena sistem terlalu fokus mendahulukan yang "prioritas"sampai lupa kalau ada thread lain yang butuh resource buat selesai. 
