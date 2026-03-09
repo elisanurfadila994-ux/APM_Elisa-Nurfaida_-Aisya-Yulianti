@@ -1,0 +1,4 @@
+# Perbaikan dengan mutex
+1. Dengan menggunakan lock, program memastikan bahwa critical section hanya dieksekusi oleh satu thread pada satu waktu, memastikan integritas data. 
+2. Mutual exclusion bisa tercapai dengan cara mutex, semaphore, disable interrupts, dan instruksi mesin spesial.
+3. Hasil selalu konsisten karena tidak ada yang interleaving pada counter, karena itu tercatat dimemori sempurna.
