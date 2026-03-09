@@ -1,0 +1,6 @@
+# simulasi deaclock 
+Empat kondisi coffman terpenuhi :
+    1. mutual exclusion : resource hanya bisa digunakan satu thread pada satu waktu.
+    2. hold and wait: thread memengang satu resource sambil menunggu resource lain.
+    3. no preemption : resource tidak bisa diambil paksa dari thread yang memegangnya.
+    4. circular wait : dimana thread 1 menunggu thread 2, dan thread 2 menunggu thread 1.
